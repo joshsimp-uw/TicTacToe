@@ -30,152 +30,164 @@
     {
       tableLayoutPanel1 = new TableLayoutPanel();
       a1Btn = new Button();
-      button1 = new Button();
-      button2 = new Button();
-      button3 = new Button();
-      button4 = new Button();
-      button5 = new Button();
-      button6 = new Button();
-      button7 = new Button();
-      button8 = new Button();
+      a2Btn = new Button();
+      a3Btn = new Button();
+      b1Btn = new Button();
+      b2Btn = new Button();
+      b3Btn = new Button();
+      c1Btn = new Button();
+      c2Btn = new Button();
+      c3Btn = new Button();
+      welcomeLbl = new Label();
       tableLayoutPanel1.SuspendLayout();
       SuspendLayout();
       // 
       // tableLayoutPanel1
       // 
-      tableLayoutPanel1.ColumnCount = 4;
-      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.Controls.Add(a1Btn, 0, 1);
-      tableLayoutPanel1.Controls.Add(button1, 1, 1);
-      tableLayoutPanel1.Controls.Add(button2, 2, 1);
-      tableLayoutPanel1.Controls.Add(button3, 0, 2);
-      tableLayoutPanel1.Controls.Add(button4, 1, 2);
-      tableLayoutPanel1.Controls.Add(button5, 2, 2);
-      tableLayoutPanel1.Controls.Add(button6, 0, 3);
-      tableLayoutPanel1.Controls.Add(button7, 1, 3);
-      tableLayoutPanel1.Controls.Add(button8, 2, 3);
-      tableLayoutPanel1.Dock = DockStyle.Fill;
+      tableLayoutPanel1.ColumnCount = 3;
+      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
+      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
+      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.34F));
+      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+      tableLayoutPanel1.Controls.Add(a1Btn, 0, 0);
+      tableLayoutPanel1.Controls.Add(a2Btn, 1, 0);
+      tableLayoutPanel1.Controls.Add(a3Btn, 2, 0);
+      tableLayoutPanel1.Controls.Add(b1Btn, 0, 1);
+      tableLayoutPanel1.Controls.Add(b2Btn, 1, 1);
+      tableLayoutPanel1.Controls.Add(b3Btn, 2, 1);
+      tableLayoutPanel1.Controls.Add(c1Btn, 0, 2);
+      tableLayoutPanel1.Controls.Add(c2Btn, 1, 2);
+      tableLayoutPanel1.Controls.Add(c3Btn, 2, 2);
+      tableLayoutPanel1.Dock = DockStyle.Left;
       tableLayoutPanel1.Location = new Point(0, 0);
       tableLayoutPanel1.Name = "tableLayoutPanel1";
-      tableLayoutPanel1.RowCount = 4;
-      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-      tableLayoutPanel1.Size = new Size(568, 541);
+      tableLayoutPanel1.RowCount = 3;
+      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333359F));
+      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333359F));
+      tableLayoutPanel1.Size = new Size(447, 441);
       tableLayoutPanel1.TabIndex = 0;
       // 
       // a1Btn
       // 
       a1Btn.Dock = DockStyle.Fill;
       a1Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      a1Btn.Location = new Point(3, 138);
+      a1Btn.Location = new Point(3, 3);
       a1Btn.Name = "a1Btn";
-      a1Btn.Size = new Size(136, 129);
+      a1Btn.Size = new Size(142, 140);
       a1Btn.TabIndex = 0;
       a1Btn.Text = "X";
       a1Btn.UseVisualStyleBackColor = true;
       // 
-      // button1
+      // a2Btn
       // 
-      button1.Dock = DockStyle.Fill;
-      button1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button1.Location = new Point(145, 138);
-      button1.Name = "button1";
-      button1.Size = new Size(136, 129);
-      button1.TabIndex = 1;
-      button1.Text = "X";
-      button1.UseVisualStyleBackColor = true;
+      a2Btn.Dock = DockStyle.Fill;
+      a2Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      a2Btn.Location = new Point(151, 3);
+      a2Btn.Name = "a2Btn";
+      a2Btn.Size = new Size(142, 140);
+      a2Btn.TabIndex = 1;
+      a2Btn.Text = "X";
+      a2Btn.UseVisualStyleBackColor = true;
       // 
-      // button2
+      // a3Btn
       // 
-      button2.Dock = DockStyle.Fill;
-      button2.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button2.Location = new Point(287, 138);
-      button2.Name = "button2";
-      button2.Size = new Size(136, 129);
-      button2.TabIndex = 2;
-      button2.Text = "X";
-      button2.UseVisualStyleBackColor = true;
+      a3Btn.Dock = DockStyle.Fill;
+      a3Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      a3Btn.Location = new Point(299, 3);
+      a3Btn.Name = "a3Btn";
+      a3Btn.Size = new Size(145, 140);
+      a3Btn.TabIndex = 2;
+      a3Btn.Text = "X";
+      a3Btn.UseVisualStyleBackColor = true;
       // 
-      // button3
+      // b1Btn
       // 
-      button3.Dock = DockStyle.Fill;
-      button3.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button3.Location = new Point(3, 273);
-      button3.Name = "button3";
-      button3.Size = new Size(136, 129);
-      button3.TabIndex = 3;
-      button3.Text = "X";
-      button3.UseVisualStyleBackColor = true;
+      b1Btn.Dock = DockStyle.Fill;
+      b1Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      b1Btn.Location = new Point(3, 149);
+      b1Btn.Name = "b1Btn";
+      b1Btn.Size = new Size(142, 141);
+      b1Btn.TabIndex = 3;
+      b1Btn.Text = "X";
+      b1Btn.UseVisualStyleBackColor = true;
       // 
-      // button4
+      // b2Btn
       // 
-      button4.Dock = DockStyle.Fill;
-      button4.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button4.Location = new Point(145, 273);
-      button4.Name = "button4";
-      button4.Size = new Size(136, 129);
-      button4.TabIndex = 4;
-      button4.Text = "X";
-      button4.UseVisualStyleBackColor = true;
+      b2Btn.Dock = DockStyle.Fill;
+      b2Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      b2Btn.Location = new Point(151, 149);
+      b2Btn.Name = "b2Btn";
+      b2Btn.Size = new Size(142, 141);
+      b2Btn.TabIndex = 4;
+      b2Btn.Text = "X";
+      b2Btn.UseVisualStyleBackColor = true;
       // 
-      // button5
+      // b3Btn
       // 
-      button5.Dock = DockStyle.Fill;
-      button5.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button5.Location = new Point(287, 273);
-      button5.Name = "button5";
-      button5.Size = new Size(136, 129);
-      button5.TabIndex = 5;
-      button5.Text = "X";
-      button5.UseVisualStyleBackColor = true;
+      b3Btn.Dock = DockStyle.Fill;
+      b3Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      b3Btn.Location = new Point(299, 149);
+      b3Btn.Name = "b3Btn";
+      b3Btn.Size = new Size(145, 141);
+      b3Btn.TabIndex = 5;
+      b3Btn.Text = "X";
+      b3Btn.UseVisualStyleBackColor = true;
       // 
-      // button6
+      // c1Btn
       // 
-      button6.Dock = DockStyle.Fill;
-      button6.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button6.Location = new Point(3, 408);
-      button6.Name = "button6";
-      button6.Size = new Size(136, 130);
-      button6.TabIndex = 6;
-      button6.Text = "X";
-      button6.UseVisualStyleBackColor = true;
+      c1Btn.Dock = DockStyle.Fill;
+      c1Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      c1Btn.Location = new Point(3, 296);
+      c1Btn.Name = "c1Btn";
+      c1Btn.Size = new Size(142, 142);
+      c1Btn.TabIndex = 6;
+      c1Btn.Text = "X";
+      c1Btn.UseVisualStyleBackColor = true;
       // 
-      // button7
+      // c2Btn
       // 
-      button7.Dock = DockStyle.Fill;
-      button7.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button7.Location = new Point(145, 408);
-      button7.Name = "button7";
-      button7.Size = new Size(136, 130);
-      button7.TabIndex = 7;
-      button7.Text = "X";
-      button7.UseVisualStyleBackColor = true;
+      c2Btn.Dock = DockStyle.Fill;
+      c2Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      c2Btn.Location = new Point(151, 296);
+      c2Btn.Name = "c2Btn";
+      c2Btn.Size = new Size(142, 142);
+      c2Btn.TabIndex = 7;
+      c2Btn.Text = "X";
+      c2Btn.UseVisualStyleBackColor = true;
       // 
-      // button8
+      // c3Btn
       // 
-      button8.Dock = DockStyle.Fill;
-      button8.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-      button8.Location = new Point(287, 408);
-      button8.Name = "button8";
-      button8.Size = new Size(136, 130);
-      button8.TabIndex = 8;
-      button8.Text = "X";
-      button8.UseVisualStyleBackColor = true;
+      c3Btn.Dock = DockStyle.Fill;
+      c3Btn.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      c3Btn.Location = new Point(299, 296);
+      c3Btn.Name = "c3Btn";
+      c3Btn.Size = new Size(145, 142);
+      c3Btn.TabIndex = 8;
+      c3Btn.Text = "X";
+      c3Btn.UseVisualStyleBackColor = true;
+      // 
+      // welcomeLbl
+      // 
+      welcomeLbl.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+      welcomeLbl.Location = new Point(453, 9);
+      welcomeLbl.Name = "welcomeLbl";
+      welcomeLbl.Size = new Size(166, 70);
+      welcomeLbl.TabIndex = 1;
+      welcomeLbl.Text = "Welcome to Tic-Tac-Toe!";
+      welcomeLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
       // Form1
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
       BackColor = SystemColors.GradientInactiveCaption;
-      ClientSize = new Size(568, 541);
+      ClientSize = new Size(624, 441);
+      Controls.Add(welcomeLbl);
       Controls.Add(tableLayoutPanel1);
       MaximizeBox = false;
       MinimizeBox = false;
+      MinimumSize = new Size(640, 480);
       Name = "Form1";
       ShowIcon = false;
       Text = "Tic-Tac-Toe";
@@ -186,14 +198,15 @@
     #endregion
 
     private TableLayoutPanel tableLayoutPanel1;
-    private Button button1;
+    private Button a2Btn;
     private Button a1Btn;
-    private Button button2;
-    private Button button3;
-    private Button button4;
-    private Button button5;
-    private Button button6;
-    private Button button7;
-    private Button button8;
+    private Button a3Btn;
+    private Button b1Btn;
+    private Button b2Btn;
+    private Button b3Btn;
+    private Button c1Btn;
+    private Button c2Btn;
+    private Button c3Btn;
+    private Label welcomeLbl;
   }
 }
