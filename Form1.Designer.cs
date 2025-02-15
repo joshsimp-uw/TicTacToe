@@ -39,25 +39,25 @@
       c2Btn = new Button();
       c3Btn = new Button();
       welcomeLbl = new Label();
-      label1 = new Label();
-      label2 = new Label();
-      label3 = new Label();
-      textBox1 = new TextBox();
-      button1 = new Button();
-      button2 = new Button();
-      button3 = new Button();
-      button4 = new Button();
+      playerNameLbl = new Label();
+      nameLbl = new Label();
+      enterNameLbl = new Label();
+      playerNameTb = new TextBox();
+      updateNameBtn = new Button();
+      newGameBtn = new Button();
+      resetGameBtn = new Button();
+      resetStatsBtn = new Button();
       winsLbl = new Label();
       losesLbl = new Label();
       tiesLbl = new Label();
       tableLayoutPanel2 = new TableLayoutPanel();
       tiesCountLbl = new Label();
-      lossesCountLbl = new Label();
+      losesCountLbl = new Label();
       winsCountLbl = new Label();
       turnLbl = new Label();
       turnStatusLbl = new Label();
-      button5 = new Button();
-      button6 = new Button();
+      changeNameBtn = new Button();
+      exitBtn = new Button();
       tableLayoutPanel1.SuspendLayout();
       tableLayoutPanel2.SuspendLayout();
       SuspendLayout();
@@ -97,7 +97,6 @@
       a1Btn.Size = new Size(142, 140);
       a1Btn.TabIndex = 0;
       a1Btn.UseVisualStyleBackColor = true;
-      a1Btn.Click += a1Btn_Click;
       // 
       // a2Btn
       // 
@@ -189,76 +188,80 @@
       welcomeLbl.Text = "Welcome to Tic-Tac-Toe!";
       welcomeLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
-      // label1
+      // playerNameLbl
       // 
-      label1.AutoSize = true;
-      label1.Location = new Point(453, 125);
-      label1.Name = "label1";
-      label1.Size = new Size(77, 15);
-      label1.TabIndex = 2;
-      label1.Text = "Player Name:";
+      playerNameLbl.AutoSize = true;
+      playerNameLbl.Location = new Point(455, 131);
+      playerNameLbl.Name = "playerNameLbl";
+      playerNameLbl.Size = new Size(77, 15);
+      playerNameLbl.TabIndex = 2;
+      playerNameLbl.Text = "Player Name:";
       // 
-      // label2
+      // nameLbl
       // 
-      label2.AutoSize = true;
-      label2.Location = new Point(536, 125);
-      label2.Name = "label2";
-      label2.Size = new Size(39, 15);
-      label2.TabIndex = 3;
-      label2.Text = "Name";
+      nameLbl.AutoSize = true;
+      nameLbl.Location = new Point(538, 131);
+      nameLbl.Name = "nameLbl";
+      nameLbl.Size = new Size(39, 15);
+      nameLbl.TabIndex = 3;
+      nameLbl.Text = "Name";
       // 
-      // label3
+      // enterNameLbl
       // 
-      label3.AutoSize = true;
-      label3.Location = new Point(453, 79);
-      label3.Name = "label3";
-      label3.Size = new Size(133, 15);
-      label3.TabIndex = 4;
-      label3.Text = "Please enter your name:";
+      enterNameLbl.AutoSize = true;
+      enterNameLbl.Location = new Point(453, 79);
+      enterNameLbl.Name = "enterNameLbl";
+      enterNameLbl.Size = new Size(133, 15);
+      enterNameLbl.TabIndex = 4;
+      enterNameLbl.Text = "Please enter your name:";
       // 
-      // textBox1
+      // playerNameTb
       // 
-      textBox1.Location = new Point(455, 99);
-      textBox1.Name = "textBox1";
-      textBox1.Size = new Size(103, 23);
-      textBox1.TabIndex = 5;
-      textBox1.Text = "Enter name";
+      playerNameTb.Location = new Point(455, 99);
+      playerNameTb.Name = "playerNameTb";
+      playerNameTb.Size = new Size(103, 23);
+      playerNameTb.TabIndex = 5;
+      playerNameTb.Text = "Enter name";
       // 
-      // button1
+      // updateNameBtn
       // 
-      button1.Location = new Point(564, 99);
-      button1.Name = "button1";
-      button1.Size = new Size(55, 23);
-      button1.TabIndex = 6;
-      button1.Text = "Update";
-      button1.UseVisualStyleBackColor = true;
+      updateNameBtn.Location = new Point(564, 99);
+      updateNameBtn.Name = "updateNameBtn";
+      updateNameBtn.Size = new Size(55, 23);
+      updateNameBtn.TabIndex = 6;
+      updateNameBtn.Text = "Update";
+      updateNameBtn.UseVisualStyleBackColor = true;
+      updateNameBtn.Click += updateNameBtn_Click;
       // 
-      // button2
+      // newGameBtn
       // 
-      button2.Location = new Point(455, 149);
-      button2.Name = "button2";
-      button2.Size = new Size(164, 23);
-      button2.TabIndex = 7;
-      button2.Text = "New Game";
-      button2.UseVisualStyleBackColor = true;
+      newGameBtn.Location = new Point(455, 149);
+      newGameBtn.Name = "newGameBtn";
+      newGameBtn.Size = new Size(164, 23);
+      newGameBtn.TabIndex = 7;
+      newGameBtn.Text = "New Game";
+      newGameBtn.UseVisualStyleBackColor = true;
+      newGameBtn.Click += newGameBtn_Click;
       // 
-      // button3
+      // resetGameBtn
       // 
-      button3.Location = new Point(455, 178);
-      button3.Name = "button3";
-      button3.Size = new Size(164, 23);
-      button3.TabIndex = 8;
-      button3.Text = "Reset Game";
-      button3.UseVisualStyleBackColor = true;
+      resetGameBtn.Location = new Point(455, 178);
+      resetGameBtn.Name = "resetGameBtn";
+      resetGameBtn.Size = new Size(164, 23);
+      resetGameBtn.TabIndex = 8;
+      resetGameBtn.Text = "Reset Game";
+      resetGameBtn.UseVisualStyleBackColor = true;
+      resetGameBtn.Click += resetGameBtn_Click;
       // 
-      // button4
+      // resetStatsBtn
       // 
-      button4.Location = new Point(455, 207);
-      button4.Name = "button4";
-      button4.Size = new Size(164, 23);
-      button4.TabIndex = 9;
-      button4.Text = "Reset Stats";
-      button4.UseVisualStyleBackColor = true;
+      resetStatsBtn.Location = new Point(455, 207);
+      resetStatsBtn.Name = "resetStatsBtn";
+      resetStatsBtn.Size = new Size(164, 23);
+      resetStatsBtn.TabIndex = 9;
+      resetStatsBtn.Text = "Reset Stats";
+      resetStatsBtn.UseVisualStyleBackColor = true;
+      resetStatsBtn.Click += resetStatsBtn_Click;
       // 
       // winsLbl
       // 
@@ -302,7 +305,7 @@
       tableLayoutPanel2.Controls.Add(losesLbl, 0, 2);
       tableLayoutPanel2.Controls.Add(winsLbl, 0, 1);
       tableLayoutPanel2.Controls.Add(tiesCountLbl, 1, 3);
-      tableLayoutPanel2.Controls.Add(lossesCountLbl, 1, 2);
+      tableLayoutPanel2.Controls.Add(losesCountLbl, 1, 2);
       tableLayoutPanel2.Controls.Add(winsCountLbl, 1, 1);
       tableLayoutPanel2.Controls.Add(turnLbl, 0, 0);
       tableLayoutPanel2.Controls.Add(turnStatusLbl, 1, 0);
@@ -328,16 +331,16 @@
       tiesCountLbl.Text = "0";
       tiesCountLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
-      // lossesCountLbl
+      // losesCountLbl
       // 
-      lossesCountLbl.AutoSize = true;
-      lossesCountLbl.Dock = DockStyle.Fill;
-      lossesCountLbl.Location = new Point(91, 82);
-      lossesCountLbl.Name = "lossesCountLbl";
-      lossesCountLbl.Size = new Size(83, 41);
-      lossesCountLbl.TabIndex = 14;
-      lossesCountLbl.Text = "0";
-      lossesCountLbl.TextAlign = ContentAlignment.MiddleCenter;
+      losesCountLbl.AutoSize = true;
+      losesCountLbl.Dock = DockStyle.Fill;
+      losesCountLbl.Location = new Point(91, 82);
+      losesCountLbl.Name = "losesCountLbl";
+      losesCountLbl.Size = new Size(83, 41);
+      losesCountLbl.TabIndex = 14;
+      losesCountLbl.Text = "0";
+      losesCountLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
       // winsCountLbl
       // 
@@ -365,32 +368,33 @@
       // 
       turnStatusLbl.AutoSize = true;
       turnStatusLbl.Dock = DockStyle.Fill;
-      turnStatusLbl.ForeColor = Color.Green;
+      turnStatusLbl.ForeColor = SystemColors.ActiveCaptionText;
       turnStatusLbl.Location = new Point(91, 0);
       turnStatusLbl.Name = "turnStatusLbl";
       turnStatusLbl.Size = new Size(83, 41);
       turnStatusLbl.TabIndex = 17;
-      turnStatusLbl.Text = "Turn Status";
       turnStatusLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
-      // button5
+      // changeNameBtn
       // 
-      button5.Location = new Point(455, 99);
-      button5.Name = "button5";
-      button5.Size = new Size(103, 23);
-      button5.TabIndex = 14;
-      button5.Text = "Change Name";
-      button5.UseVisualStyleBackColor = true;
-      button5.Visible = false;
+      changeNameBtn.Location = new Point(455, 99);
+      changeNameBtn.Name = "changeNameBtn";
+      changeNameBtn.Size = new Size(103, 23);
+      changeNameBtn.TabIndex = 14;
+      changeNameBtn.Text = "Change Name";
+      changeNameBtn.UseVisualStyleBackColor = true;
+      changeNameBtn.Visible = false;
+      changeNameBtn.Click += changeNameBtn_Click;
       // 
-      // button6
+      // exitBtn
       // 
-      button6.Location = new Point(455, 236);
-      button6.Name = "button6";
-      button6.Size = new Size(164, 23);
-      button6.TabIndex = 15;
-      button6.Text = "Exit Game";
-      button6.UseVisualStyleBackColor = true;
+      exitBtn.Location = new Point(455, 236);
+      exitBtn.Name = "exitBtn";
+      exitBtn.Size = new Size(164, 23);
+      exitBtn.TabIndex = 15;
+      exitBtn.Text = "Exit Game";
+      exitBtn.UseVisualStyleBackColor = true;
+      exitBtn.Click += exitBtn_Click;
       // 
       // Form1
       // 
@@ -398,17 +402,17 @@
       AutoScaleMode = AutoScaleMode.Font;
       BackColor = SystemColors.GradientInactiveCaption;
       ClientSize = new Size(624, 441);
-      Controls.Add(button6);
-      Controls.Add(button5);
+      Controls.Add(exitBtn);
+      Controls.Add(changeNameBtn);
       Controls.Add(tableLayoutPanel2);
-      Controls.Add(button4);
-      Controls.Add(button3);
-      Controls.Add(button2);
-      Controls.Add(button1);
-      Controls.Add(textBox1);
-      Controls.Add(label3);
-      Controls.Add(label2);
-      Controls.Add(label1);
+      Controls.Add(resetStatsBtn);
+      Controls.Add(resetGameBtn);
+      Controls.Add(newGameBtn);
+      Controls.Add(updateNameBtn);
+      Controls.Add(playerNameTb);
+      Controls.Add(enterNameLbl);
+      Controls.Add(nameLbl);
+      Controls.Add(playerNameLbl);
       Controls.Add(welcomeLbl);
       Controls.Add(tableLayoutPanel1);
       MaximizeBox = false;
@@ -438,24 +442,24 @@
     private Button c2Btn;
     private Button c3Btn;
     private Label welcomeLbl;
-    private Label label1;
-    private Label label2;
-    private Label label3;
-    private TextBox textBox1;
-    private Button button1;
-    private Button button2;
-    private Button button3;
-    private Button button4;
+    private Label playerNameLbl;
+    private Label nameLbl;
+    private Label enterNameLbl;
+    private TextBox playerNameTb;
+    private Button updateNameBtn;
+    private Button newGameBtn;
+    private Button resetGameBtn;
+    private Button resetStatsBtn;
     private Label winsLbl;
     private Label losesLbl;
     private Label tiesLbl;
     private TableLayoutPanel tableLayoutPanel2;
     private Label winsCountLbl;
-    private Label lossesCountLbl;
+    private Label losesCountLbl;
     private Label tiesCountLbl;
-    private Button button5;
+    private Button changeNameBtn;
     private Label turnLbl;
     private Label turnStatusLbl;
-    private Button button6;
+    private Button exitBtn;
   }
 }
