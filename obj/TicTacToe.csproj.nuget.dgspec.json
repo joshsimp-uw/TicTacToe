@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\UW\\TINFO200\\TicTacToe\\TicTacToe.csproj": {}
+    "C:\\Users\\toxic\\Source\\Repos\\TicTacToe\\TicTacToe.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\UW\\TINFO200\\TicTacToe\\TicTacToe.csproj": {
+    "C:\\Users\\toxic\\Source\\Repos\\TicTacToe\\TicTacToe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\UW\\TINFO200\\TicTacToe\\TicTacToe.csproj",
+        "projectUniqueName": "C:\\Users\\toxic\\Source\\Repos\\TicTacToe\\TicTacToe.csproj",
         "projectName": "TicTacToe",
-        "projectPath": "D:\\Projects\\UW\\TINFO200\\TicTacToe\\TicTacToe.csproj",
-        "packagesPath": "C:\\Users\\Joshua\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\UW\\TINFO200\\TicTacToe\\obj\\",
+        "projectPath": "C:\\Users\\toxic\\Source\\Repos\\TicTacToe\\TicTacToe.csproj",
+        "packagesPath": "C:\\Users\\toxic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\toxic\\Source\\Repos\\TicTacToe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Joshua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\toxic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -60,6 +60,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.12, 8.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -68,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

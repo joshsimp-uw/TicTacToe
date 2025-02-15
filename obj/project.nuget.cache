@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LD7mMO+Z72I=",
+  "dgSpecHash": "mPBOSHPHrhQ=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\UW\\TINFO200\\TicTacToe\\TicTacToe.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\toxic\\Source\\Repos\\TicTacToe\\TicTacToe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\toxic\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.12\\microsoft.netcore.app.host.win-x64.8.0.12.nupkg.sha512"
+  ],
   "logs": []
 }
