@@ -51,9 +51,13 @@
       losesLbl = new Label();
       tiesLbl = new Label();
       tableLayoutPanel2 = new TableLayoutPanel();
-      label4 = new Label();
-      label5 = new Label();
-      label6 = new Label();
+      tiesCountLbl = new Label();
+      lossesCountLbl = new Label();
+      winsCountLbl = new Label();
+      turnLbl = new Label();
+      turnStatusLbl = new Label();
+      button5 = new Button();
+      button6 = new Button();
       tableLayoutPanel1.SuspendLayout();
       tableLayoutPanel2.SuspendLayout();
       SuspendLayout();
@@ -92,8 +96,8 @@
       a1Btn.Name = "a1Btn";
       a1Btn.Size = new Size(142, 140);
       a1Btn.TabIndex = 0;
-      a1Btn.Text = "X";
       a1Btn.UseVisualStyleBackColor = true;
+      a1Btn.Click += a1Btn_Click;
       // 
       // a2Btn
       // 
@@ -103,7 +107,6 @@
       a2Btn.Name = "a2Btn";
       a2Btn.Size = new Size(142, 140);
       a2Btn.TabIndex = 1;
-      a2Btn.Text = "X";
       a2Btn.UseVisualStyleBackColor = true;
       // 
       // a3Btn
@@ -114,7 +117,6 @@
       a3Btn.Name = "a3Btn";
       a3Btn.Size = new Size(145, 140);
       a3Btn.TabIndex = 2;
-      a3Btn.Text = "X";
       a3Btn.UseVisualStyleBackColor = true;
       // 
       // b1Btn
@@ -125,7 +127,6 @@
       b1Btn.Name = "b1Btn";
       b1Btn.Size = new Size(142, 141);
       b1Btn.TabIndex = 3;
-      b1Btn.Text = "X";
       b1Btn.UseVisualStyleBackColor = true;
       // 
       // b2Btn
@@ -136,7 +137,6 @@
       b2Btn.Name = "b2Btn";
       b2Btn.Size = new Size(142, 141);
       b2Btn.TabIndex = 4;
-      b2Btn.Text = "X";
       b2Btn.UseVisualStyleBackColor = true;
       // 
       // b3Btn
@@ -147,7 +147,6 @@
       b3Btn.Name = "b3Btn";
       b3Btn.Size = new Size(145, 141);
       b3Btn.TabIndex = 5;
-      b3Btn.Text = "X";
       b3Btn.UseVisualStyleBackColor = true;
       // 
       // c1Btn
@@ -158,7 +157,6 @@
       c1Btn.Name = "c1Btn";
       c1Btn.Size = new Size(142, 142);
       c1Btn.TabIndex = 6;
-      c1Btn.Text = "X";
       c1Btn.UseVisualStyleBackColor = true;
       // 
       // c2Btn
@@ -169,7 +167,6 @@
       c2Btn.Name = "c2Btn";
       c2Btn.Size = new Size(142, 142);
       c2Btn.TabIndex = 7;
-      c2Btn.Text = "X";
       c2Btn.UseVisualStyleBackColor = true;
       // 
       // c3Btn
@@ -180,7 +177,6 @@
       c3Btn.Name = "c3Btn";
       c3Btn.Size = new Size(145, 142);
       c3Btn.TabIndex = 8;
-      c3Btn.Text = "X";
       c3Btn.UseVisualStyleBackColor = true;
       // 
       // welcomeLbl
@@ -268,9 +264,9 @@
       // 
       winsLbl.AutoSize = true;
       winsLbl.Dock = DockStyle.Fill;
-      winsLbl.Location = new Point(3, 0);
+      winsLbl.Location = new Point(3, 41);
       winsLbl.Name = "winsLbl";
-      winsLbl.Size = new Size(82, 66);
+      winsLbl.Size = new Size(82, 41);
       winsLbl.TabIndex = 10;
       winsLbl.Text = "Wins: ";
       winsLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -279,9 +275,9 @@
       // 
       losesLbl.AutoSize = true;
       losesLbl.Dock = DockStyle.Fill;
-      losesLbl.Location = new Point(3, 66);
+      losesLbl.Location = new Point(3, 82);
       losesLbl.Name = "losesLbl";
-      losesLbl.Size = new Size(82, 66);
+      losesLbl.Size = new Size(82, 41);
       losesLbl.TabIndex = 11;
       losesLbl.Text = "Loses: ";
       losesLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -290,9 +286,9 @@
       // 
       tiesLbl.AutoSize = true;
       tiesLbl.Dock = DockStyle.Fill;
-      tiesLbl.Location = new Point(3, 132);
+      tiesLbl.Location = new Point(3, 123);
       tiesLbl.Name = "tiesLbl";
-      tiesLbl.Size = new Size(82, 68);
+      tiesLbl.Size = new Size(82, 44);
       tiesLbl.TabIndex = 12;
       tiesLbl.Text = "Ties: ";
       tiesLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -302,54 +298,99 @@
       tableLayoutPanel2.ColumnCount = 2;
       tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
       tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-      tableLayoutPanel2.Controls.Add(tiesLbl, 0, 2);
-      tableLayoutPanel2.Controls.Add(losesLbl, 0, 1);
-      tableLayoutPanel2.Controls.Add(winsLbl, 0, 0);
-      tableLayoutPanel2.Controls.Add(label4, 1, 0);
-      tableLayoutPanel2.Controls.Add(label5, 1, 1);
-      tableLayoutPanel2.Controls.Add(label6, 1, 2);
+      tableLayoutPanel2.Controls.Add(tiesLbl, 0, 3);
+      tableLayoutPanel2.Controls.Add(losesLbl, 0, 2);
+      tableLayoutPanel2.Controls.Add(winsLbl, 0, 1);
+      tableLayoutPanel2.Controls.Add(tiesCountLbl, 1, 3);
+      tableLayoutPanel2.Controls.Add(lossesCountLbl, 1, 2);
+      tableLayoutPanel2.Controls.Add(winsCountLbl, 1, 1);
+      tableLayoutPanel2.Controls.Add(turnLbl, 0, 0);
+      tableLayoutPanel2.Controls.Add(turnStatusLbl, 1, 0);
       tableLayoutPanel2.Dock = DockStyle.Bottom;
-      tableLayoutPanel2.Location = new Point(447, 241);
+      tableLayoutPanel2.Location = new Point(447, 274);
       tableLayoutPanel2.Name = "tableLayoutPanel2";
-      tableLayoutPanel2.RowCount = 3;
-      tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.4448128F));
-      tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.44482F));
-      tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.11037F));
-      tableLayoutPanel2.Size = new Size(177, 200);
+      tableLayoutPanel2.RowCount = 4;
+      tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+      tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+      tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+      tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+      tableLayoutPanel2.Size = new Size(177, 167);
       tableLayoutPanel2.TabIndex = 13;
       // 
-      // label4
+      // tiesCountLbl
       // 
-      label4.AutoSize = true;
-      label4.Dock = DockStyle.Fill;
-      label4.Location = new Point(91, 0);
-      label4.Name = "label4";
-      label4.Size = new Size(83, 66);
-      label4.TabIndex = 13;
-      label4.Text = "0";
-      label4.TextAlign = ContentAlignment.MiddleCenter;
+      tiesCountLbl.AutoSize = true;
+      tiesCountLbl.Dock = DockStyle.Fill;
+      tiesCountLbl.Location = new Point(91, 123);
+      tiesCountLbl.Name = "tiesCountLbl";
+      tiesCountLbl.Size = new Size(83, 44);
+      tiesCountLbl.TabIndex = 15;
+      tiesCountLbl.Text = "0";
+      tiesCountLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
-      // label5
+      // lossesCountLbl
       // 
-      label5.AutoSize = true;
-      label5.Dock = DockStyle.Fill;
-      label5.Location = new Point(91, 66);
-      label5.Name = "label5";
-      label5.Size = new Size(83, 66);
-      label5.TabIndex = 14;
-      label5.Text = "0";
-      label5.TextAlign = ContentAlignment.MiddleCenter;
+      lossesCountLbl.AutoSize = true;
+      lossesCountLbl.Dock = DockStyle.Fill;
+      lossesCountLbl.Location = new Point(91, 82);
+      lossesCountLbl.Name = "lossesCountLbl";
+      lossesCountLbl.Size = new Size(83, 41);
+      lossesCountLbl.TabIndex = 14;
+      lossesCountLbl.Text = "0";
+      lossesCountLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
-      // label6
+      // winsCountLbl
       // 
-      label6.AutoSize = true;
-      label6.Dock = DockStyle.Fill;
-      label6.Location = new Point(91, 132);
-      label6.Name = "label6";
-      label6.Size = new Size(83, 68);
-      label6.TabIndex = 15;
-      label6.Text = "0";
-      label6.TextAlign = ContentAlignment.MiddleCenter;
+      winsCountLbl.AutoSize = true;
+      winsCountLbl.Dock = DockStyle.Fill;
+      winsCountLbl.Location = new Point(91, 41);
+      winsCountLbl.Name = "winsCountLbl";
+      winsCountLbl.Size = new Size(83, 41);
+      winsCountLbl.TabIndex = 13;
+      winsCountLbl.Text = "0";
+      winsCountLbl.TextAlign = ContentAlignment.MiddleCenter;
+      // 
+      // turnLbl
+      // 
+      turnLbl.AutoSize = true;
+      turnLbl.Dock = DockStyle.Fill;
+      turnLbl.Location = new Point(3, 0);
+      turnLbl.Name = "turnLbl";
+      turnLbl.Size = new Size(82, 41);
+      turnLbl.TabIndex = 16;
+      turnLbl.Text = "Turn:";
+      turnLbl.TextAlign = ContentAlignment.MiddleCenter;
+      // 
+      // turnStatusLbl
+      // 
+      turnStatusLbl.AutoSize = true;
+      turnStatusLbl.Dock = DockStyle.Fill;
+      turnStatusLbl.ForeColor = Color.Green;
+      turnStatusLbl.Location = new Point(91, 0);
+      turnStatusLbl.Name = "turnStatusLbl";
+      turnStatusLbl.Size = new Size(83, 41);
+      turnStatusLbl.TabIndex = 17;
+      turnStatusLbl.Text = "Turn Status";
+      turnStatusLbl.TextAlign = ContentAlignment.MiddleCenter;
+      // 
+      // button5
+      // 
+      button5.Location = new Point(455, 99);
+      button5.Name = "button5";
+      button5.Size = new Size(103, 23);
+      button5.TabIndex = 14;
+      button5.Text = "Change Name";
+      button5.UseVisualStyleBackColor = true;
+      button5.Visible = false;
+      // 
+      // button6
+      // 
+      button6.Location = new Point(455, 236);
+      button6.Name = "button6";
+      button6.Size = new Size(164, 23);
+      button6.TabIndex = 15;
+      button6.Text = "Exit Game";
+      button6.UseVisualStyleBackColor = true;
       // 
       // Form1
       // 
@@ -357,6 +398,8 @@
       AutoScaleMode = AutoScaleMode.Font;
       BackColor = SystemColors.GradientInactiveCaption;
       ClientSize = new Size(624, 441);
+      Controls.Add(button6);
+      Controls.Add(button5);
       Controls.Add(tableLayoutPanel2);
       Controls.Add(button4);
       Controls.Add(button3);
@@ -374,6 +417,7 @@
       Name = "Form1";
       ShowIcon = false;
       Text = "Tic-Tac-Toe";
+      Load += Form1_Load;
       tableLayoutPanel1.ResumeLayout(false);
       tableLayoutPanel2.ResumeLayout(false);
       tableLayoutPanel2.PerformLayout();
@@ -406,8 +450,12 @@
     private Label losesLbl;
     private Label tiesLbl;
     private TableLayoutPanel tableLayoutPanel2;
-    private Label label4;
-    private Label label5;
-    private Label label6;
+    private Label winsCountLbl;
+    private Label lossesCountLbl;
+    private Label tiesCountLbl;
+    private Button button5;
+    private Label turnLbl;
+    private Label turnStatusLbl;
+    private Button button6;
   }
 }
