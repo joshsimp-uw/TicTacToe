@@ -97,6 +97,7 @@
       a1Btn.Size = new Size(142, 140);
       a1Btn.TabIndex = 0;
       a1Btn.UseVisualStyleBackColor = true;
+      a1Btn.Click += Square_Click;
       // 
       // a2Btn
       // 
@@ -107,6 +108,7 @@
       a2Btn.Size = new Size(142, 140);
       a2Btn.TabIndex = 1;
       a2Btn.UseVisualStyleBackColor = true;
+      a2Btn.Click += Square_Click;
       // 
       // a3Btn
       // 
@@ -117,6 +119,7 @@
       a3Btn.Size = new Size(145, 140);
       a3Btn.TabIndex = 2;
       a3Btn.UseVisualStyleBackColor = true;
+      a3Btn.Click += Square_Click;
       // 
       // b1Btn
       // 
@@ -127,6 +130,7 @@
       b1Btn.Size = new Size(142, 141);
       b1Btn.TabIndex = 3;
       b1Btn.UseVisualStyleBackColor = true;
+      b1Btn.Click += Square_Click;
       // 
       // b2Btn
       // 
@@ -137,6 +141,7 @@
       b2Btn.Size = new Size(142, 141);
       b2Btn.TabIndex = 4;
       b2Btn.UseVisualStyleBackColor = true;
+      b2Btn.Click += Square_Click;
       // 
       // b3Btn
       // 
@@ -147,6 +152,7 @@
       b3Btn.Size = new Size(145, 141);
       b3Btn.TabIndex = 5;
       b3Btn.UseVisualStyleBackColor = true;
+      b3Btn.Click += Square_Click;
       // 
       // c1Btn
       // 
@@ -157,6 +163,7 @@
       c1Btn.Size = new Size(142, 142);
       c1Btn.TabIndex = 6;
       c1Btn.UseVisualStyleBackColor = true;
+      c1Btn.Click += Square_Click;
       // 
       // c2Btn
       // 
@@ -167,6 +174,7 @@
       c2Btn.Size = new Size(142, 142);
       c2Btn.TabIndex = 7;
       c2Btn.UseVisualStyleBackColor = true;
+      c2Btn.Click += Square_Click;
       // 
       // c3Btn
       // 
@@ -177,6 +185,7 @@
       c3Btn.Size = new Size(145, 142);
       c3Btn.TabIndex = 8;
       c3Btn.UseVisualStyleBackColor = true;
+      c3Btn.Click += Square_Click;
       // 
       // welcomeLbl
       // 
@@ -269,7 +278,7 @@
       winsLbl.Dock = DockStyle.Fill;
       winsLbl.Location = new Point(3, 41);
       winsLbl.Name = "winsLbl";
-      winsLbl.Size = new Size(82, 41);
+      winsLbl.Size = new Size(55, 41);
       winsLbl.TabIndex = 10;
       winsLbl.Text = "Wins: ";
       winsLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -280,7 +289,7 @@
       losesLbl.Dock = DockStyle.Fill;
       losesLbl.Location = new Point(3, 82);
       losesLbl.Name = "losesLbl";
-      losesLbl.Size = new Size(82, 41);
+      losesLbl.Size = new Size(55, 41);
       losesLbl.TabIndex = 11;
       losesLbl.Text = "Loses: ";
       losesLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -291,7 +300,7 @@
       tiesLbl.Dock = DockStyle.Fill;
       tiesLbl.Location = new Point(3, 123);
       tiesLbl.Name = "tiesLbl";
-      tiesLbl.Size = new Size(82, 44);
+      tiesLbl.Size = new Size(55, 44);
       tiesLbl.TabIndex = 12;
       tiesLbl.Text = "Ties: ";
       tiesLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -299,8 +308,8 @@
       // tableLayoutPanel2
       // 
       tableLayoutPanel2.ColumnCount = 2;
-      tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-      tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+      tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 34.46328F));
+      tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65.53672F));
       tableLayoutPanel2.Controls.Add(tiesLbl, 0, 3);
       tableLayoutPanel2.Controls.Add(losesLbl, 0, 2);
       tableLayoutPanel2.Controls.Add(winsLbl, 0, 1);
@@ -324,9 +333,9 @@
       // 
       tiesCountLbl.AutoSize = true;
       tiesCountLbl.Dock = DockStyle.Fill;
-      tiesCountLbl.Location = new Point(91, 123);
+      tiesCountLbl.Location = new Point(64, 123);
       tiesCountLbl.Name = "tiesCountLbl";
-      tiesCountLbl.Size = new Size(83, 44);
+      tiesCountLbl.Size = new Size(110, 44);
       tiesCountLbl.TabIndex = 15;
       tiesCountLbl.Text = "0";
       tiesCountLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -335,9 +344,9 @@
       // 
       losesCountLbl.AutoSize = true;
       losesCountLbl.Dock = DockStyle.Fill;
-      losesCountLbl.Location = new Point(91, 82);
+      losesCountLbl.Location = new Point(64, 82);
       losesCountLbl.Name = "losesCountLbl";
-      losesCountLbl.Size = new Size(83, 41);
+      losesCountLbl.Size = new Size(110, 41);
       losesCountLbl.TabIndex = 14;
       losesCountLbl.Text = "0";
       losesCountLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -346,9 +355,9 @@
       // 
       winsCountLbl.AutoSize = true;
       winsCountLbl.Dock = DockStyle.Fill;
-      winsCountLbl.Location = new Point(91, 41);
+      winsCountLbl.Location = new Point(64, 41);
       winsCountLbl.Name = "winsCountLbl";
-      winsCountLbl.Size = new Size(83, 41);
+      winsCountLbl.Size = new Size(110, 41);
       winsCountLbl.TabIndex = 13;
       winsCountLbl.Text = "0";
       winsCountLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -359,7 +368,7 @@
       turnLbl.Dock = DockStyle.Fill;
       turnLbl.Location = new Point(3, 0);
       turnLbl.Name = "turnLbl";
-      turnLbl.Size = new Size(82, 41);
+      turnLbl.Size = new Size(55, 41);
       turnLbl.TabIndex = 16;
       turnLbl.Text = "Turn:";
       turnLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -369,9 +378,9 @@
       turnStatusLbl.AutoSize = true;
       turnStatusLbl.Dock = DockStyle.Fill;
       turnStatusLbl.ForeColor = SystemColors.ActiveCaptionText;
-      turnStatusLbl.Location = new Point(91, 0);
+      turnStatusLbl.Location = new Point(64, 0);
       turnStatusLbl.Name = "turnStatusLbl";
-      turnStatusLbl.Size = new Size(83, 41);
+      turnStatusLbl.Size = new Size(110, 41);
       turnStatusLbl.TabIndex = 17;
       turnStatusLbl.TextAlign = ContentAlignment.MiddleCenter;
       // 
