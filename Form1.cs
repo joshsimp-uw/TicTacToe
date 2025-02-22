@@ -111,23 +111,19 @@ namespace TicTacToe
         turnStatusLbl.Text = $"You win, {playerName}!";
         turnStatusLbl.ForeColor = Color.Green;
         DisableAllSquares();
-        SaveStatistics(); // Save statistics after a win
-        return;
       }
-
-      // Check to see if the board is full
-      if (IsBoardFull())
+      else if (!CheckForWinner(playerMarker) && !IsBoardFull())
+      {
+        ComputerMove();
+      }
+      else if (IsBoardFull()) // Check to see if the board is full
       {
         //If the board is full with no clear winner then the status text will declare a tie
         ties++;
         tiesCountLbl.Text = ties.ToString(); // Update ties count
         turnStatusLbl.Text = "It's a tie!";
         SaveStatistics(); // Save statistics after a tie
-        return;
       }
-
-
-
     }
 
     /// <summary>
