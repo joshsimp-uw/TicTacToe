@@ -150,7 +150,7 @@ namespace TicTacToe
         //If the board shows a tic tac toe winner for the Computer the status text will declare the Computer the winner
         computerWins++;
         losesCountLbl.Text = computerWins.ToString(); // Update losses count
-        turnStatusLbl.Text = $"Computer wins! Better luck next time {playerName}.";
+        turnStatusLbl.Text = $"Computer wins!";
         DisableAllSquares();
         SaveStatistics(); // Save statistics after a loss
         return;
@@ -167,7 +167,7 @@ namespace TicTacToe
       }
 
       // Update the status label to indicate the human player's turn
-      turnStatusLbl.Text = $"Your turn (You are {playerMarker})";
+      turnStatusLbl.Text = $"Your turn, {playerMarker}!";
     }
 
     /// <summary>
