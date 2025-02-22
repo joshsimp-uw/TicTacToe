@@ -93,38 +93,36 @@ namespace TicTacToe
             // reassign the object as a button (since it is)
             var button = (Button)sender;
 
+      //Player will select a button and the text of the button will update to their given marker (X or O)
+      button.Text += playerMarker;
+      button.Enabled = false;
 
-            //Player will select a button and the text of the button will update to their given marker (X or O)
-            button.Text += playerMarker;
-            button.Enabled = false;
+      // Check for a winner when the button is clicked. 
+      if (CheckForWinner(playerMarker))
+      {
+        //If the board shows a tic tac toe winner for the Player the status text will declare the Player the winner
+        winsCountLbl.Text = (int.Parse(winsCountLbl.Text) + 1).ToString(); // Update wins count
+        turnStatusLbl.Text = $"You win, {playerName}!";
+        turnStatusLbl.ForeColor = Color.Green;
+        DisableAllSquares();
+        SaveStatistics(); // Save statistics after a win
+        return;
+      }
 
-            // Check for a winner when the button is clicked. 
-            if (CheckForWinner(playerMarker))
-            {
-                //If the board shows a tic tac toe winner for the Player the status text will declare the Player the winner
-                winsCountLbl.Text = (int.Parse(winsCountLbl.Text) + 1).ToString(); // Update wins count
-                turnStatusLbl.Text = $"You win, {playerName}!";
-                DisableAllSquares();
-                SaveStatistics(); // Save statistics after a win
-            }
-            else if (!CheckForWinner(playerMarker) && !IsBoardFull())
-            {
-                //Makes the computer move
-                ComputerMove();
-            }
-            // Check to see if the board is full
-            else if (IsBoardFull())
-            {
-                //If the board is full with no clear winner then the status text will declare a tie
-                ties++;
-                tiesCountLbl.Text = ties.ToString(); // Update ties count
-                turnStatusLbl.Text = "It's a tie!";
-                SaveStatistics(); // Save statistics after a tie
-            }
+      // Check to see if the board is full
+      if (IsBoardFull())
+      {
+        //If the board is full with no clear winner then the status text will declare a tie
+        ties++;
+        tiesCountLbl.Text = ties.ToString(); // Update ties count
+        turnStatusLbl.Text = "It's a tie!";
+        SaveStatistics(); // Save statistics after a tie
+        return;
+      }
 
 
 
-        }
+    }
 
         /// <summary>
         /// Makes a random move on behalf of the "computer" opponent.
