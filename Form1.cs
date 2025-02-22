@@ -93,15 +93,16 @@ namespace TicTacToe
       if (button.Text != "") return;
 
       //Player will select a button and the text of the button will update to their given marker (X or O)
-      button.Text = playerMarker.ToString();
+      button.Text += playerMarker;
       button.Enabled = false;
 
       // Check for a winner when the button is clicked. 
       if (CheckForWinner(playerMarker))
       {
         //If the board shows a tic tac toe winner for the Player the status text will declare the Player the winner
-        winsCountLbl.Text = (int.Parse(winsCountLbl.Text) - 1).ToString(); // Update wins count
+        winsCountLbl.Text = (int.Parse(winsCountLbl.Text) + 1).ToString(); // Update wins count
         turnStatusLbl.Text = $"You win, {nameLbl.Text}!";
+        turnStatusLbl.ForeColor = Color.Green;
         DisableAllSquares();
         SaveStatistics(); // Save statistics after a win
         return;
