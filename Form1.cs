@@ -153,21 +153,20 @@ namespace TicTacToe
         turnStatusLbl.Text = $"Computer wins!";
         DisableAllSquares();
         SaveStatistics(); // Save statistics after a loss
-        return;
       }
-
-      if (IsBoardFull())
+      else if (!CheckForWinner(computerMarker) && !IsBoardFull())
+      {
+        // Update the status label to indicate the human player's turn
+        turnStatusLbl.Text = $"Your turn, {playerMarker}!";
+      }
+      else if (IsBoardFull())
       {
         //If the board is full with no clear winner then the status text will declare a tie
         ties++;
         tiesCountLbl.Text = ties.ToString(); // Update ties count
         turnStatusLbl.Text = "It's a tie!";
         SaveStatistics(); // Save statistics after a tie
-        return;
       }
-
-      // Update the status label to indicate the human player's turn
-      turnStatusLbl.Text = $"Your turn, {playerMarker}!";
     }
 
     /// <summary>
